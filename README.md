@@ -2,8 +2,7 @@
 
 An end-to-end data analytics project focused on cleaning inconsistent electronic health records, engineering clinical risk features, exploring biometric distributions, and running SQL queries for patient triage and operational reporting.
 
-[![Colab](https://img.shields.io/badge/Google_Colab-Open_Notebook-F9AB00?style=for-the-badge&logo=googlecolab&logoColor=white)](https://colab.research.google.com/drive/1Ai9yKhi_wmPtIy6m0Ur9T7IhHtjBKNO2?usp=sharing)
-[![Tableau](https://img.shields.io/badge/Tableau_Public-Interactive_Dashboard-E97627?style=for-the-badge&logo=tableau&logoColor=white)](https://public.tableau.com/views/HealthcareTablue/Dashboard2)
+[Open Interactive Notebook in Google Colab](https://colab.research.google.com/drive/1Ai9yKhi_wmPtIy6m0Ur9T7IhHtjBKNO2?usp=sharing) • [Open Interactive Dashboard on Tableau Public](https://public.tableau.com/views/HealthcareTablue/Dashboard2)
 
 ---
 
@@ -59,7 +58,6 @@ Healthcare-Practice/
 │   ├── 05_demographic_gender_risk_profiling.png # Demographic risk bar chart
 │   └── tableau_dashboard_preview.png     # Interactive Tableau dashboard preview
 ├── Healthcare Tablue.twb                  # Tableau Workbook file
-├── index.html                            # Interactive web dashboard viewer (GitHub Pages ready)
 ├── .gitignore                            # Standard git exclusions
 ├── requirements.txt                      # Project dependencies
 └── README.md                             # Project documentation
@@ -145,13 +143,12 @@ An interactive dashboard was built in Tableau Public to provide clinicians and h
 
 [![Healthcare Patient Analytics Tableau Dashboard](assets/tableau_dashboard_preview.png)](https://public.tableau.com/views/HealthcareTablue/Dashboard2)
 
-> ### 📊 [👉 Click Here to Open & Explore the Live Interactive Tableau Dashboard](https://public.tableau.com/views/HealthcareTablue/Dashboard2)
+> [Click Here to Open and Explore the Interactive Dashboard on Tableau Public](https://public.tableau.com/views/HealthcareTablue/Dashboard2)
 >
 > **Interactive Capabilities & Key Visualizations:**
 > * **1. Patient Age & Chronic Condition Scatter**: Hover and filter through individual patient records across age cohorts (25, 35, 60, 70) mapped against primary diagnoses (Asthma, Diabetes, Heart Disease, Hypertension).
 > * **2. Demographic & Gender Risk Profiling**: Interactive bar breakdown comparing the high-risk rate across male, female, and other gender identities within each age group.
 > * **3. Condition vs. Medication Matrix**: Heatmap tiles showing treatment distribution (Albuterol, Atorvastatin, Lisinopril, Metformin) and highlighting unmedicated patients for immediate follow-up.
-> * **Live In-Browser Embed**: You can also view the embedded interactive dashboard directly via [`index.html`](index.html).
 
 ---
 
