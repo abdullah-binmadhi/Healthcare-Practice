@@ -120,47 +120,90 @@ df.loc[df['Condition'].isin(severe_conditions), 'Risk_Score'] += 1
 
 ## Phase 3: Exploratory Data Analysis & Key Findings
 
-### 1. Condition Breakdown
+### 1. Statistical Summary of Numeric Health Metrics
+
+Descriptive statistics across the core biometric variables (`Age`, `Cholesterol`, `Systolic BP`, and `Diastolic BP`):
+
+```text
+               Age  Cholesterol  Systolic BP  Diastolic BP
+count  1000.000000  1000.000000   834.000000    834.000000
+mean     43.175000   187.100000   125.371703     81.420863
+std      15.937326    19.919508    11.467097      7.554625
+min      25.000000   160.000000   110.000000     70.000000
+25%      35.000000   180.000000   110.000000     70.000000
+50%      35.000000   180.000000   130.000000     85.000000
+75%      60.000000   200.000000   140.000000     90.000000
+max      70.000000   220.000000   140.000000     90.000000
+```
+
+| Metric | Age (Years) | Cholesterol (mg/dL) | Systolic BP (mmHg) | Diastolic BP (mmHg) |
+| :--- | :--- | :--- | :--- | :--- |
+| **Count** | 1,000.00 | 1,000.00 | 834.00 | 834.00 |
+| **Mean** | 43.18 | 187.10 | 125.37 | 81.42 |
+| **Std Dev** | 15.94 | 19.92 | 11.47 | 7.55 |
+| **Min** | 25.00 | 160.00 | 110.00 | 70.00 |
+| **25% (Q1)** | 35.00 | 180.00 | 110.00 | 70.00 |
+| **50% (Median)** | 35.00 | 180.00 | 130.00 | 85.00 |
+| **75% (Q3)** | 60.00 | 200.00 | 140.00 | 90.00 |
+| **Max** | 70.00 | 220.00 | 140.00 | 90.00 |
+
+#### Key Analytical & Clinical Takeaways:
+
+1. **Data Completeness & Imputation Dynamics (`count`)**:
+   * **Age & Cholesterol (1,000 records)**: 100% complete after cleaning and median imputation (159 missing age values and 231 missing cholesterol values imputed).
+   * **Blood Pressure (834 records)**: 166 records in the raw dataset had missing or unparseable blood pressure entries, leaving 834 valid paired systolic/diastolic measurements.
+
+2. **Patient Age Distribution (`Age`)**:
+   * **Central Tendency & Spread**: Mean age is **43.18 years** ($\pm 15.94$), spanning from **25.0 to 70.0 years**.
+   * **Imputation Clustering**: Both Q1 (25%) and Median (50%) are **35.0 years** because 159 missing values were imputed using the median (35), creating a noticeable spike at age 35. The upper quartile ($75\% = 60.0$ years) and maximum (70.0 years) reflect a substantial senior cohort.
+
+3. **Lipid Profile (`Cholesterol`)**:
+   * **Central Tendency**: Mean is **187.10 mg/dL** with a median of **180.00 mg/dL** ($\text{IQR} = 180.0 - 200.0\text{ mg/dL}$).
+   * **Cardiovascular Risk Threshold**: At least 75% of patients maintain cholesterol levels at or below the standard normal threshold ($200\text{ mg/dL}$). However, the upper quartile ($75\%\text{ to Max} = 200.0 - 220.0\text{ mg/dL}$) crosses into the borderline-high / hypercholesterolemia clinical risk range.
+
+4. **Hemodynamic Profile (`Systolic BP` & `Diastolic BP`)**:
+   * **Systolic Blood Pressure**: Average of **125.37 mmHg** with a median of **130.00 mmHg** (range: 110.0–140.0 mmHg). Over 50% of patients with recorded BP exhibit elevated or Stage 1 hypertension levels ($\ge 130\text{ mmHg}$), with the top 25% reaching the **140.0 mmHg** threshold (Stage 2 Hypertension criteria).
+   * **Diastolic Blood Pressure**: Average of **81.42 mmHg** with a median of **85.00 mmHg** (range: 70.0–90.0 mmHg). The median (85.0 mmHg) and upper quartile (90.0 mmHg) indicate widespread Stage 1 and Stage 2 diastolic elevation across the patient population.
+
+---
+
+### 2. Condition Breakdown
 Examining diagnosis counts showed how patients were distributed across major conditions:
 
-<!-- Placeholder for Condition Distribution Chart -->
 ![Medical Condition Distribution](assets/01_condition_distribution.png)
 *Figure 1: Distribution of patient records by medical condition.*
 
-* **Insight**: Cardiovascular and metabolic conditions (hypertension, diabetes, and heart disease) made up more than 60% of diagnosed cases.
+* **Insight**: Diagnosed conditions are distributed across Asthma (~210), Heart Disease (~207), Diabetes (~205), and Hypertension (~171), with ~206 records classified as Unknown.
 
 ---
 
-### 2. Age Demographics
+### 3. Age Demographics
 Visualizing patient age helped identify the predominant age groups in the clinic population:
 
-<!-- Placeholder for Age Distribution Chart -->
 ![Patient Age Distribution](assets/02_age_distribution.png)
 *Figure 2: Histogram and density curve of patient ages.*
 
-* **Insight**: Most patients fall into the middle-aged bracket (30–55), followed by seniors, which aligns with the higher prevalence of elevated blood pressure and cholesterol.
+* **Insight**: The distribution shows a pronounced density spike at age 35 due to median imputation, alongside distinct demographic clusters among young adults (25–30) and older adults (57–70).
 
 ---
 
-### 3. Blood Pressure by Medical Condition
+### 4. Blood Pressure by Medical Condition
 Boxplots were used to examine systolic and diastolic blood pressure ranges across diagnostic groups:
 
-<!-- Placeholder for Blood Pressure Boxplots -->
 ![Blood Pressure Boxplots](assets/03_bp_by_condition.png)
 *Figure 3: Systolic and diastolic blood pressure distributions across conditions.*
 
-* **Insight**: Patients diagnosed with hypertension and heart disease showed consistently higher median systolic blood pressure levels (frequently above 135–140 mmHg).
+* **Insight**: Patients across Diabetes, Asthma, and Hypertension exhibit elevated median systolic (130 mmHg) and diastolic (85 mmHg) levels, with upper quartiles consistently reaching 140/90 mmHg.
 
 ---
 
-### 4. Correlation Between Health Metrics
+### 5. Correlation Between Health Metrics
 A heatmap was generated to inspect relationships among continuous numeric metrics:
 
-<!-- Placeholder for Correlation Matrix -->
 ![Correlation Matrix](assets/04_correlation_heatmap.png)
 *Figure 4: Correlation heatmap of numeric health metrics.*
 
-* **Insight**: Systolic and diastolic blood pressure showed a strong positive correlation, while age showed a moderate upward trend with cholesterol levels.
+* **Insight**: Systolic and diastolic blood pressure exhibit a near-perfect positive linear correlation ($r = 0.98$). In contrast, age and cholesterol display near-zero correlation with blood pressure in this cohort ($r \approx -0.05\text{ to }0.07$), indicating that cardiovascular risk factors are distributed across different demographic segments.
 
 ---
 
