@@ -6,6 +6,20 @@ An end-to-end data analytics project focused on cleaning inconsistent electronic
 
 ---
 
+## Languages & Tools Used
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![Excel](https://img.shields.io/badge/Microsoft_Excel-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white)
+![Tableau](https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=tableau&logoColor=white)
+
+* **Python**: Data cleaning, text standardization, missing value imputation, feature engineering, and statistical distribution analysis (`pandas`, `numpy`, `matplotlib`, `seaborn`).
+* **MySQL**: Relational database querying, window functions (`DENSE_RANK()`), demographic risk profiling, condition summaries, and patient triage ranking.
+* **Excel**: Cleaned dataset inspection, tabular data review, and spreadsheet reporting.
+* **Tableau**: Visual demographic risk profiling, clinical reporting, and interactive chart design.
+
+---
+
 ## Project Overview
 
 Electronic health record (EHR) systems often collect clinical and patient data across different formats, resulting in data quality issues such as inconsistent text formatting, mixed date representations, composite strings for vital signs, and missing values.
