@@ -146,23 +146,23 @@ max      70.000000   220.000000   140.000000     90.000000
 | **75% (Q3)** | 60.00 | 200.00 | 140.00 | 90.00 |
 | **Max** | 70.00 | 220.00 | 140.00 | 90.00 |
 
-#### Key Analytical & Clinical Takeaways:
+#### Key Takeaways from the Summary Statistics:
 
-1. **Data Completeness & Imputation Dynamics (`count`)**:
-   * **Age & Cholesterol (1,000 records)**: 100% complete after cleaning and median imputation (159 missing age values and 231 missing cholesterol values imputed).
-   * **Blood Pressure (834 records)**: 166 records in the raw dataset had missing or unparseable blood pressure entries, leaving 834 valid paired systolic/diastolic measurements.
+1. **Data Completeness & Cleaning (`count`)**:
+   * **Age & Cholesterol**: Both have all 1,000 records after cleaning and filling missing values with the median (159 missing ages and 231 missing cholesterol values).
+   * **Blood Pressure**: 834 records have valid blood pressure measurements after removing 166 missing or unreadable strings from the raw file.
 
-2. **Patient Age Distribution (`Age`)**:
-   * **Central Tendency & Spread**: Mean age is **43.18 years** ($\pm 15.94$), spanning from **25.0 to 70.0 years**.
-   * **Imputation Clustering**: Both Q1 (25%) and Median (50%) are **35.0 years** because 159 missing values were imputed using the median (35), creating a noticeable spike at age 35. The upper quartile ($75\% = 60.0$ years) and maximum (70.0 years) reflect a substantial senior cohort.
+2. **Patient Age (`Age`)**:
+   * The average age is **43.2 years** (ranging from 25 to 70).
+   * Both the 25th percentile and median are **35 years** because the 159 missing ages were replaced with the median (35), which creates the clear peak we see in the histogram. The 75th percentile is 60 years, showing a solid group of older adults.
 
-3. **Lipid Profile (`Cholesterol`)**:
-   * **Central Tendency**: Mean is **187.10 mg/dL** with a median of **180.00 mg/dL** ($\text{IQR} = 180.0 - 200.0\text{ mg/dL}$).
-   * **Cardiovascular Risk Threshold**: At least 75% of patients maintain cholesterol levels at or below the standard normal threshold ($200\text{ mg/dL}$). However, the upper quartile ($75\%\text{ to Max} = 200.0 - 220.0\text{ mg/dL}$) crosses into the borderline-high / hypercholesterolemia clinical risk range.
+3. **Cholesterol Levels (`Cholesterol`)**:
+   * The average cholesterol is **187.1 mg/dL** with a median of **180.0 mg/dL** (ranging from 160 to 220 mg/dL).
+   * Around 75% of patients have cholesterol levels at or below the normal baseline of 200 mg/dL, while the top 25% reach borderline-high or high levels (200 to 220 mg/dL).
 
-4. **Hemodynamic Profile (`Systolic BP` & `Diastolic BP`)**:
-   * **Systolic Blood Pressure**: Average of **125.37 mmHg** with a median of **130.00 mmHg** (range: 110.0–140.0 mmHg). Over 50% of patients with recorded BP exhibit elevated or Stage 1 hypertension levels ($\ge 130\text{ mmHg}$), with the top 25% reaching the **140.0 mmHg** threshold (Stage 2 Hypertension criteria).
-   * **Diastolic Blood Pressure**: Average of **81.42 mmHg** with a median of **85.00 mmHg** (range: 70.0–90.0 mmHg). The median (85.0 mmHg) and upper quartile (90.0 mmHg) indicate widespread Stage 1 and Stage 2 diastolic elevation across the patient population.
+4. **Blood Pressure (`Systolic BP` & `Diastolic BP`)**:
+   * **Systolic BP**: Averages **125.4 mmHg** with a median of **130.0 mmHg**. Over half of the patients have elevated or stage 1 hypertension readings (130+ mmHg), with the top 25% hitting the stage 2 mark at 140 mmHg.
+   * **Diastolic BP**: Averages **81.4 mmHg** with a median of **85.0 mmHg**. This matches the systolic trend, with more than half the patients showing elevated diastolic numbers (85+ mmHg).
 
 ---
 
@@ -375,26 +375,26 @@ GROUP BY Risk_Category;
 
 ---
 
-## Conclusion & Key Insights
+## Conclusion & Takeaways
 
-This end-to-end healthcare analytics pipeline transformed 1,000 messy, unstructured electronic health records into an operational clinical intelligence system combining Python preprocessing, biometric statistical analysis, and SQL triage reporting.
+In this project, I cleaned a messy healthcare dataset with 1,000 patient records in Python, analyzed the biometric distributions, and wrote SQL queries to help clinic staff prioritize patients and find treatment gaps.
 
-### Summary of Key Findings:
+### Main Takeaways:
 
-1. **Data Quality & Pipeline Integrity**:
-   * Preprocessing resolved pervasive EHR formatting inconsistencies—parsing composite blood pressure strings into separate systolic and diastolic fields, standardizing multi-format visit dates, and applying median imputation to ensure clean data for downstream analytics.
+1. **Data Cleaning Made Analysis Possible**:
+   * The raw data had lots of messy inputs, including combined blood pressure strings (`"140/90"`), text numbers, missing entries, and mixed date formats. Splitting blood pressure into separate numeric columns and filling missing ages/cholesterol with median values made the data ready for SQL analysis.
 
-2. **Systemic vs. Age-Isolated Risk Reality**:
-   * Contrary to the common clinical assumption that cardiovascular vulnerability is confined to elderly demographics, risk prevalence remains remarkably uniform at **~50%–53%** across young adults, middle-aged patients, and seniors across all genders.
-   * However, clinical workload heavily concentrates in the **middle-aged bracket (30–55 years)**, which accounts for nearly half of the entire patient cohort and represents the single largest volume driver for primary care teams.
+2. **Risk is Spread Across Ages, But Middle-Aged Patients Drive Clinic Volume**:
+   * Even though high blood pressure and cholesterol are often thought of as older-person issues, about **50%–53% of young adults** were also classified as high risk.
+   * However, **middle-aged patients (ages 30–55) make up nearly half of the entire patient population**, meaning they represent the largest volume of visits and follow-ups for hospital staff.
 
-3. **Elevated Hemodynamic & Chronic Disease Burden**:
-   * More than 50% of patients with recorded vital signs exhibit elevated or hypertensive readings (median systolic BP: **130 mmHg**, median diastolic BP: **85 mmHg**), with the upper quartile reaching Stage 2 Hypertension criteria (140/90 mmHg).
-   * Confirmed chronic conditions (Asthma, Diabetes, Hypertension, and Heart Disease) consistently reflect elevated average risk scores (1.86–1.94) and higher mean cholesterol compared to unassigned records.
+3. **High Blood Pressure is Common in This Clinic**:
+   * The median blood pressure in the dataset was **130/85 mmHg**, showing that more than half of the patients have elevated or stage 1 hypertension readings.
+   * Patients diagnosed with Asthma, Diabetes, Heart Disease, and Hypertension had consistently higher risk scores (averaging ~1.86 to 1.94) compared to patients with unrecorded conditions.
 
-4. **Actionable Clinical & Operational Interventions**:
-   * **Automated Priority Triage (`DENSE_RANK()`)**: Care coordinators can instantly identify and contact high-risk Tier 1 and Tier 2 patients presenting maximum risk scores (3) paired with stage 2 vitals (140 mmHg systolic BP and 220 mg/dL cholesterol).
-   * **Closing the Medication Adherence Gap**: Auditing prescriptions revealed that **20.86% of hypertensive patients** (and ~17%–19% of diabetic and heart disease patients) are currently unmedicated (`NONE`), providing an immediate, high-impact target for proactive clinical outreach and medication management.
+4. **SQL Insights for Clinic Operations**:
+   * **Prioritizing Patients (`DENSE_RANK()`)**: The priority ranking query allows nurses and doctors to quickly see the highest-risk patients first instead of sorting through hundreds of rows manually.
+   * **Finding Untreated Patients**: The medication query revealed that **about 21% of patients diagnosed with hypertension are currently unmedicated (`NONE`)**, giving the care team a clear list of patients who need immediate prescription follow-up.
 
 ---
 
