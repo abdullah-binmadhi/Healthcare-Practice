@@ -90,9 +90,9 @@ To support deeper analysis and operational triage, three clinical features were 
 
 ### 1. Age Groups (`Age_Group`)
 Patients were binned into three standard demographic groups:
-* **Young**: 0–29 years old
-* **Middle-aged**: 30–55 years old
-* **Senior**: 56–100 years old
+* **Young**: 0–29 years old *(in this dataset, all 171 patients are age 25)*
+* **Middle-aged**: 30–55 years old *(in this dataset, all 498 patients are age 35 post-imputation; there are no patients in their 40s or 50s)*
+* **Senior**: 56–100 years old *(in this dataset, 331 patients at ages 60 and 70)*
 
 ### 2. Risk Category (`Risk_Category`)
 Patients were marked as **High Risk** if they met either threshold for stage 2 hypertension or high cholesterol:
@@ -177,12 +177,12 @@ Examining diagnosis counts showed how patients were distributed across major con
 ---
 
 ### 3. Age Demographics
-Visualizing patient age helped identify the predominant age groups in the clinic population:
+Visualizing patient age shows the demographic distribution across the clinic:
 
 ![Patient Age Distribution](assets/02_age_distribution.png)
 *Figure 2: Histogram and density curve of patient ages.*
 
-* **Insight**: The distribution shows a pronounced density spike at age 35 due to median imputation, alongside distinct demographic clusters among young adults (25–30) and older adults (57–70).
+* **Insight**: The dataset contains exactly four discrete ages: **25 (171 patients)**, **35 (498 patients)**, **60 (170 patients)**, and **70 (161 patients)**, with no patients in their 40s or 50s. The massive peak at age 35 occurs because missing ages and text entries in the raw data were imputed with the median (35), grouping 498 patients into the middle-aged category.
 
 ---
 
@@ -385,8 +385,8 @@ In this project, I cleaned a messy healthcare dataset with 1,000 patient records
    * The raw data had lots of messy inputs, including combined blood pressure strings (`"140/90"`), text numbers, missing entries, and mixed date formats. Splitting blood pressure into separate numeric columns and filling missing ages/cholesterol with median values made the data ready for SQL analysis.
 
 2. **Risk is Spread Across Ages, But Middle-Aged Patients Drive Clinic Volume**:
-   * Even though high blood pressure and cholesterol are often thought of as older-person issues, about **50%–53% of young adults** were also classified as high risk.
-   * However, **middle-aged patients (ages 30–55) make up nearly half of the entire patient population**, meaning they represent the largest volume of visits and follow-ups for hospital staff.
+   * Even though high blood pressure and cholesterol are often thought of as older-person issues, about **50%–53% of young adults (age 25)** were also classified as high risk.
+   * However, **the middle-aged group (all 35-year-olds in this dataset due to median imputation) makes up nearly half the clinic (498 out of 1,000 patients)**, meaning they represent the largest volume of visits and follow-ups for hospital staff. Note that there are no patients in their 40s or 50s in this dataset.
 
 3. **High Blood Pressure is Common in This Clinic**:
    * The median blood pressure in the dataset was **130/85 mmHg**, showing that more than half of the patients have elevated or stage 1 hypertension readings.
