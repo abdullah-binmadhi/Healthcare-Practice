@@ -274,7 +274,18 @@ ORDER BY `Age_Group`, High_Risk_Rate_Pct DESC;
 | Female | Senior | 94 | 54 | 57.45% | 124.3 | 190.0 |
 | Male | Senior | 87 | 49 | 56.32% | 125.1 | 188.5 |
 
-* **Insight**: High-risk prevalence remains above 54% across middle-aged and senior groups regardless of gender, confirming that age is the primary contributor to cardiovascular vulnerability.
+![Demographic & Gender Risk Profiling](assets/05_demographic_gender_risk_profiling.png)
+*Figure 5: High Risk Rate across Age Groups and Gender (Tableau Profiling).*
+
+A common clinical assumption is that high cardiovascular risk concentrates almost exclusively among older patients. However, demographic profiling reveals that risk prevalence remains remarkably uniform at roughly 50% across every age bracket and gender.
+
+While the percentage of high-risk patients barely changes from youth to retirement, the volume does: nearly half of the entire patient population sits in the middle-aged cohort.
+
+#### Key Analytical Takeaways:
+* **Uniform Baseline Risk (~49% – 53%)**: Across males and females, the proportion of high-risk patients hovers between 51% and 53% in all three age tiers. Age alone does not shield younger individuals from elevated blood pressure or cholesterol.
+* **Middle-Aged Cohort Drives Clinical Volume**: Middle-aged individuals account for 498 of the 1,000 patients (51.6% high-risk rate). This group represents the single largest workload for primary care teams and chronic disease clinics.
+* **Early-Onset Risk in Young Adults**: Young females (51.8%) and young males (51.6%) exhibit virtually the same high-risk prevalence as senior females (53.1%) and senior males (51.9%). This highlights that lifestyle, metabolic, and hypertensive risks emerge decades before retirement.
+* **Gender-Specific Nuances**: Females show slightly higher risk rates overall (52.6%) compared to males (50.4%) and the 'Other' category (48.5%), though the gap is narrow enough that risk remains systemic across all demographic segments.
 
 ---
 
@@ -371,7 +382,7 @@ An executive dashboard was designed in Tableau (`Healthcare Tablue.twb`) to give
 
 <!-- Placeholder for Tableau Dashboard Screenshot -->
 ![Tableau Clinical Dashboard Preview](assets/tableau_dashboard_preview.png)
-*Figure 5: Preview of the interactive Tableau clinical dashboard.*
+*Figure 6: Preview of the interactive Tableau clinical dashboard.*
 
 ### Main Dashboard Elements:
 * **KPI Metrics**: Total patient count, percentage of high-risk patients, average risk score, and patients requiring immediate triage.
