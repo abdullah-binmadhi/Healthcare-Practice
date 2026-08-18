@@ -82,17 +82,6 @@ The initial dataset contained 1,000 rows and 10 columns with several data qualit
 | **Email & Phone Number** | Blank spaces and string `'nan'` entries | Standardized empty entries to null values (`NaN`) |
 | **Duplicate Rows** | Repeated entries | Removed duplicate records using `drop_duplicates(keep='first')` |
 
-```python
-# Split combined blood pressure into separate numeric columns
-bp_split = df['Blood Pressure'].str.split('/', expand=True)
-df['Systolic_BP'] = pd.to_numeric(bp_split[0], errors='coerce')
-df['Diastolic_BP'] = pd.to_numeric(bp_split[1], errors='coerce')
-df.drop('Blood Pressure', axis=1, inplace=True)
-
-# Clean and impute age
-df['Age'] = pd.to_numeric(df['Age'], errors='coerce')
-df['Age'] = df['Age'].fillna(df['Age'].median()).astype(int)
-```
 
 ---
 
