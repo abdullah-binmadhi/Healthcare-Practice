@@ -1,0 +1,6 @@
+Condition,Patient_Count,Avg_Cholesterol,Avg_Risk_Score
+Asthma,176,188.86,1.94
+Diabetes,176,188.75,1.90
+Hypertension,139,186.62,1.88
+"Heart Disease",173,186.36,1.86
+Unknown,170,186.24,0.86

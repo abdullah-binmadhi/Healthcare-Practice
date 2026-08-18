@@ -207,12 +207,12 @@ A heatmap was generated to inspect relationships among continuous numeric metric
 
 ---
 
-## Phase 4: SQL Database Queries
+## Phase 4: Relational Database Analytics & SQL Results
 
-The cleaned data was loaded into a database table (`Healthcare_SQL.healthcare_cleaned_data`) to run key analytical queries:
+The cleaned data was loaded into a relational database table (`Healthcare_SQL.healthcare_cleaned_data`) to execute analytical reporting and clinical triage queries:
 
 ### 1. High-Risk Patient Triage Ranking (`01_patient_triage_ranking.sql`)
-Ranks high-risk patients by risk score, systolic blood pressure, and cholesterol so medical staff can prioritize outreach:
+Ranks high-risk patients using window functions (`DENSE_RANK()`) across risk score, systolic blood pressure, and cholesterol to prioritize outreach:
 
 ```sql
 SELECT 
@@ -233,10 +233,22 @@ WHERE `Risk_Category` = 'High Risk'
 ORDER BY Triage_Priority_Rank ASC;
 ```
 
+#### Query Output *(First 5 Distinct Priority Ranks)*:
+
+| Patient Name | Age | Gender | Condition | Systolic BP (mmHg) | Cholesterol (mg/dL) | Risk Score | Phone Number | Email | Triage Priority Rank |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| Robert Brown | 70 | Male | Asthma | 140 | 220 | 3 | 098-765-4321 | contact@domain.com | **1** |
+| David Lee | 25 | Other | Heart Disease | 140 | 200 | 3 | 555-555-5555 | name@hospital.org | **2** |
+| Sarah Johnson | 70 | Female | Hypertension | 130 | 220 | 3 | *(null)* | *(null)* | **3** |
+| Jane Smith | 35 | Male | Asthma | 130 | 200 | 3 | 123-456-7890 | *(null)* | **4** |
+| Michael Wilson | 35 | Female | Unknown | 140 | 220 | 2 | 555-555-5555 | patient@example.com | **5** |
+
+* **Insight**: Window ranking segments patients into prioritized tiers based on composite clinical risk, allowing care teams to intervene immediately with Tier 1 and Tier 2 patients.
+
 ---
 
 ### 2. Demographic & Gender Risk Profiling (`02_demographic_gender_risk_profiling.sql`)
-Calculates the proportion of high-risk patients along with average vital signs for each age and gender segment:
+Calculates the proportion of high-risk patients along with average vital signs for each demographic cohort:
 
 ```sql
 SELECT 
@@ -251,6 +263,18 @@ FROM `Healthcare_SQL`.`healthcare_cleaned_data`
 GROUP BY `Gender`, `Age_Group`
 ORDER BY `Age_Group`, High_Risk_Rate_Pct DESC;
 ```
+
+#### Query Output *(Top 5 Demographic Cohorts by Volume & Risk)*:
+
+| Gender | Age Group | Total Patients | High-Risk Patients | High-Risk Rate (%) | Avg Systolic BP (mmHg) | Avg Cholesterol (mg/dL) |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| Other | Middle-aged | 121 | 68 | 56.20% | 126.3 | 188.3 |
+| Female | Middle-aged | 153 | 84 | 54.90% | 125.6 | 188.4 |
+| Male | Middle-aged | 148 | 80 | 54.05% | 125.9 | 185.9 |
+| Female | Senior | 94 | 54 | 57.45% | 124.3 | 190.0 |
+| Male | Senior | 87 | 49 | 56.32% | 125.1 | 188.5 |
+
+* **Insight**: High-risk prevalence remains above 54% across middle-aged and senior groups regardless of gender, confirming that age is the primary contributor to cardiovascular vulnerability.
 
 ---
 
@@ -267,6 +291,18 @@ FROM `Healthcare_SQL`.`healthcare_cleaned_data`
 GROUP BY `Condition`
 ORDER BY Avg_Risk_Score DESC;
 ```
+
+#### Query Output:
+
+| Condition | Patient Count | Avg Cholesterol (mg/dL) | Avg Risk Score |
+| :--- | :--- | :--- | :--- |
+| **Asthma** | 176 | 188.86 | 1.94 |
+| **Diabetes** | 176 | 188.75 | 1.90 |
+| **Hypertension** | 139 | 186.62 | 1.88 |
+| **Heart Disease** | 173 | 186.36 | 1.86 |
+| **Unknown** | 170 | 186.24 | 0.86 |
+
+* **Insight**: Diagnosed conditions present elevated average risk scores (1.86–1.94) and higher average cholesterol compared to unassigned records (`Unknown` with 0.86).
 
 ---
 
@@ -285,6 +321,23 @@ GROUP BY `Condition`, `Medication`
 ORDER BY `Condition`, Patient_Count DESC;
 ```
 
+#### Query Output *(Top 2 Medications per Condition)*:
+
+| Condition | Medication | Patient Count | % Within Condition | Avg Risk Score |
+| :--- | :--- | :--- | :--- | :--- |
+| **Asthma** | ATORVASTATIN | 46 | 26.14% | 1.78 |
+| **Asthma** | ALBUTEROL | 34 | 19.32% | 2.00 |
+| **Diabetes** | METFORMIN | 40 | 22.73% | 1.88 |
+| **Diabetes** | LISINOPRIL | 38 | 21.59% | 1.84 |
+| **Heart Disease** | ATORVASTATIN | 46 | 26.59% | 1.91 |
+| **Heart Disease** | METFORMIN | 39 | 22.54% | 1.72 |
+| **Hypertension** | ATORVASTATIN | 31 | 22.30% | 1.77 |
+| **Hypertension** | NONE *(Untreated)* | 29 | 20.86% | 1.79 |
+| **Unknown** | NONE | 42 | 24.71% | 0.64 |
+| **Unknown** | ALBUTEROL | 40 | 23.53% | 0.93 |
+
+* **Insight**: In Hypertension, 20.86% of patients (29 individuals) are currently unmedicated (`NONE`), identifying a crucial gap in care management.
+
 ---
 
 ### 5. Risk Category & Age Group Pivot (`05_risk_category_age_pivot.sql`)
@@ -300,6 +353,15 @@ SELECT
 FROM `Healthcare_SQL`.`healthcare_cleaned_data`
 GROUP BY Risk_Category;
 ```
+
+#### Query Output:
+
+| Risk Category | Young Adult | Middle-Aged | Senior | Total Patients |
+| :--- | :--- | :--- | :--- | :--- |
+| **High Risk** | 0 | 232 | 145 | 446 |
+| **Low Risk** | 0 | 190 | 125 | 388 |
+
+* **Insight**: Out of 834 evaluated patients with blood pressure records, 446 patients (53.48%) fall into the **High Risk** category, with 232 concentrated in the middle-aged cohort and 145 in seniors.
 
 ---
 

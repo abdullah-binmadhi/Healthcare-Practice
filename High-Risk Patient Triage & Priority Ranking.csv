@@ -1,0 +1,447 @@
+"Patient Name",Age,Gender,Condition,"Systolic BP",Cholesterol,Risk_Score,"Phone Number",Email,Triage_Priority_Rank
+" Robert Brown ",70,Male,Asthma,140,220,3,098-765-4321,contact@domain.com,1
+" Emily Davis ",35,Female,"Heart Disease",140,220,3,,,1
+" Michael Wilson ",60,Male,Diabetes,140,220,3,098-765-4321,patient@example.com,1
+" Mary Clark ",25,Male,"Heart Disease",140,220,3,123-456-7890,name@hospital.org,1
+" David Lee ",35,Male,Asthma,140,220,3,123-456-7890,,1
+" David Lee ",35,Male,Diabetes,140,220,3,,,1
+" Emily Davis ",60,Male,Diabetes,140,220,3,,contact@domain.com,1
+" Emily Davis ",35,Other,"Heart Disease",140,220,3,,contact@domain.com,1
+" Mary Clark ",70,Male,Diabetes,140,220,3,555-555-5555,,1
+" Robert Brown ",35,Female,"Heart Disease",140,220,3,098-765-4321,patient@example.com,1
+" Jane Smith ",25,Male,Hypertension,140,220,3,098-765-4321,patient@example.com,1
+" Laura Martinez ",35,Male,Hypertension,140,220,3,123-456-7890,,1
+" Laura Martinez ",35,Female,Asthma,140,220,3,,,1
+" Emily Davis ",35,Other,Diabetes,140,220,3,,,1
+" Michael Wilson ",35,Female,"Heart Disease",140,220,3,,patient@example.com,1
+" Mary Clark ",35,Other,Asthma,140,220,3,123-456-7890,,1
+" Michael Wilson ",60,Female,Asthma,140,220,3,098-765-4321,name@hospital.org,1
+" Robert Brown ",35,Other,Hypertension,140,220,3,,,1
+" Michael Wilson ",25,Female,Diabetes,140,220,3,123-456-7890,patient@example.com,1
+" Michael Wilson ",60,Other,Diabetes,140,220,3,,patient@example.com,1
+" Robert Brown ",25,Male,Diabetes,140,220,3,555-555-5555,name@hospital.org,1
+" Michael Wilson ",35,Male,"Heart Disease",140,220,3,555-555-5555,patient@example.com,1
+" John Doe ",25,Male,Diabetes,140,220,3,123-456-7890,name@hospital.org,1
+" Mary Clark ",35,Male,Diabetes,140,220,3,098-765-4321,,1
+" James Taylor ",60,Other,Asthma,140,220,3,,,1
+" James Taylor ",60,Other,Asthma,140,220,3,555-555-5555,contact@domain.com,1
+" Michael Wilson ",35,Female,Asthma,140,220,3,,contact@domain.com,1
+" John Doe ",25,Other,Diabetes,140,220,3,098-765-4321,patient@example.com,1
+" Jane Smith ",35,Female,Asthma,140,220,3,123-456-7890,name@hospital.org,1
+" John Doe ",35,Male,Asthma,140,220,3,,,1
+" David Lee ",70,Female,Hypertension,140,220,3,123-456-7890,contact@domain.com,1
+" James Taylor ",35,Other,Hypertension,140,220,3,,,1
+" Emily Davis ",35,Male,Hypertension,140,220,3,555-555-5555,,1
+" David Lee ",35,Female,Asthma,140,220,3,,patient@example.com,1
+" Robert Brown ",35,Male,"Heart Disease",140,220,3,123-456-7890,,1
+" John Doe ",70,Male,Asthma,140,220,3,,patient@example.com,1
+" Mary Clark ",35,Male,Asthma,140,220,3,,name@hospital.org,1
+" David Lee ",25,Other,"Heart Disease",140,200,3,555-555-5555,name@hospital.org,2
+" John Doe ",25,Male,Asthma,140,200,3,098-765-4321,contact@domain.com,2
+" Laura Martinez ",35,Female,Asthma,140,200,3,,contact@domain.com,2
+" James Taylor ",35,Male,"Heart Disease",140,200,3,123-456-7890,,2
+" Laura Martinez ",35,Other,Hypertension,140,200,3,555-555-5555,patient@example.com,2
+" James Taylor ",60,Female,Diabetes,140,200,3,098-765-4321,,2
+" David Lee ",35,Male,Asthma,140,200,3,123-456-7890,,2
+" John Doe ",60,Other,"Heart Disease",140,200,3,123-456-7890,,2
+" Laura Martinez ",70,Other,"Heart Disease",140,200,3,098-765-4321,,2
+" Jane Smith ",35,Male,Diabetes,140,200,3,123-456-7890,name@hospital.org,2
+" Robert Brown ",35,Female,Hypertension,140,200,3,123-456-7890,patient@example.com,2
+" Robert Brown ",25,Other,"Heart Disease",140,200,3,555-555-5555,,2
+" Robert Brown ",70,Male,Diabetes,140,200,3,098-765-4321,name@hospital.org,2
+" Jane Smith ",35,Female,Hypertension,140,200,3,,,2
+" Sarah Johnson ",60,Female,Asthma,140,200,3,098-765-4321,contact@domain.com,2
+" Michael Wilson ",70,Male,Diabetes,140,200,3,555-555-5555,,2
+" Mary Clark ",70,Female,"Heart Disease",140,200,3,,,2
+" Robert Brown ",35,Male,Diabetes,140,200,3,555-555-5555,patient@example.com,2
+" James Taylor ",60,Male,Diabetes,140,200,3,098-765-4321,contact@domain.com,2
+" Michael Wilson ",35,Other,Asthma,140,200,3,123-456-7890,,2
+" Michael Wilson ",70,Female,Hypertension,140,200,3,098-765-4321,,2
+" James Taylor ",35,Female,Hypertension,140,200,3,,,2
+" John Doe ",35,Male,Asthma,140,200,3,,name@hospital.org,2
+" James Taylor ",35,Other,Asthma,140,200,3,555-555-5555,contact@domain.com,2
+" Jane Smith ",60,Male,"Heart Disease",140,200,3,,,2
+" Sarah Johnson ",70,Male,"Heart Disease",140,200,3,098-765-4321,name@hospital.org,2
+" John Doe ",35,Female,Diabetes,140,200,3,123-456-7890,name@hospital.org,2
+" Robert Brown ",25,Male,"Heart Disease",140,200,3,098-765-4321,,2
+" Laura Martinez ",60,Other,Asthma,140,200,3,555-555-5555,,2
+" Michael Wilson ",25,Female,"Heart Disease",140,200,3,,contact@domain.com,2
+" Emily Davis ",60,Other,Hypertension,140,200,3,123-456-7890,contact@domain.com,2
+" Michael Wilson ",35,Other,Asthma,140,200,3,,,2
+" Michael Wilson ",25,Female,Asthma,140,200,3,,,2
+" Laura Martinez ",35,Male,Diabetes,140,200,3,,patient@example.com,2
+" Jane Smith ",60,Female,Asthma,140,200,3,123-456-7890,contact@domain.com,2
+" Robert Brown ",35,Female,"Heart Disease",140,200,3,123-456-7890,contact@domain.com,2
+" Jane Smith ",35,Male,Hypertension,140,200,3,,name@hospital.org,2
+" Sarah Johnson ",35,Male,Asthma,140,200,3,123-456-7890,,2
+" John Doe ",70,Male,Asthma,140,200,3,123-456-7890,name@hospital.org,2
+" Jane Smith ",35,Female,Hypertension,140,200,3,,,2
+" David Lee ",35,Female,Diabetes,140,200,3,,name@hospital.org,2
+" John Doe ",35,Other,Asthma,140,200,3,,,2
+" Emily Davis ",35,Female,Asthma,140,200,3,,contact@domain.com,2
+" Sarah Johnson ",70,Female,Hypertension,130,220,3,,,3
+" Mary Clark ",70,Male,Asthma,130,220,3,555-555-5555,,3
+" Laura Martinez ",25,Other,Hypertension,130,220,3,123-456-7890,,3
+" Laura Martinez ",60,Other,Diabetes,130,220,3,555-555-5555,,3
+" Laura Martinez ",35,Other,"Heart Disease",130,220,3,,patient@example.com,3
+" Robert Brown ",35,Female,"Heart Disease",130,220,3,123-456-7890,name@hospital.org,3
+" David Lee ",25,Other,Hypertension,130,220,3,123-456-7890,name@hospital.org,3
+" Jane Smith ",25,Other,"Heart Disease",130,220,3,123-456-7890,name@hospital.org,3
+" Mary Clark ",35,Other,Diabetes,130,220,3,123-456-7890,contact@domain.com,3
+" David Lee ",35,Other,Asthma,130,220,3,,contact@domain.com,3
+" Jane Smith ",35,Other,"Heart Disease",130,220,3,123-456-7890,,3
+" David Lee ",35,Female,Hypertension,130,220,3,123-456-7890,,3
+" John Doe ",25,Other,Diabetes,130,220,3,098-765-4321,patient@example.com,3
+" Robert Brown ",35,Female,Asthma,130,220,3,123-456-7890,contact@domain.com,3
+" Emily Davis ",70,Female,"Heart Disease",130,220,3,123-456-7890,name@hospital.org,3
+" Michael Wilson ",35,Female,Diabetes,130,220,3,555-555-5555,,3
+" Michael Wilson ",60,Female,Hypertension,130,220,3,,patient@example.com,3
+" Sarah Johnson ",35,Female,Hypertension,130,220,3,,,3
+" Robert Brown ",60,Male,Asthma,130,220,3,123-456-7890,patient@example.com,3
+" Sarah Johnson ",35,Female,Diabetes,130,220,3,555-555-5555,patient@example.com,3
+" John Doe ",35,Female,"Heart Disease",130,220,3,555-555-5555,,3
+" Mary Clark ",25,Female,Hypertension,130,220,3,123-456-7890,patient@example.com,3
+" Mary Clark ",35,Other,"Heart Disease",130,220,3,123-456-7890,,3
+" Sarah Johnson ",35,Female,Diabetes,130,220,3,,,3
+" James Taylor ",25,Female,Asthma,130,220,3,,patient@example.com,3
+" Sarah Johnson ",25,Female,Asthma,130,220,3,,contact@domain.com,3
+" Laura Martinez ",70,Male,Asthma,130,220,3,555-555-5555,contact@domain.com,3
+" Laura Martinez ",35,Male,Asthma,130,220,3,555-555-5555,contact@domain.com,3
+" James Taylor ",25,Female,Diabetes,130,220,3,123-456-7890,,3
+" Laura Martinez ",35,Female,Asthma,130,220,3,123-456-7890,name@hospital.org,3
+" Mary Clark ",25,Male,Hypertension,130,220,3,123-456-7890,name@hospital.org,3
+" Jane Smith ",35,Male,Asthma,130,200,3,123-456-7890,,4
+" Sarah Johnson ",35,Male,Asthma,130,200,3,,contact@domain.com,4
+" James Taylor ",70,Female,"Heart Disease",130,200,3,,,4
+" Laura Martinez ",25,Female,Diabetes,130,200,3,123-456-7890,patient@example.com,4
+" James Taylor ",35,Male,"Heart Disease",130,200,3,098-765-4321,patient@example.com,4
+" James Taylor ",60,Male,Diabetes,130,200,3,123-456-7890,,4
+" John Doe ",25,Male,Diabetes,130,200,3,098-765-4321,patient@example.com,4
+" John Doe ",60,Other,"Heart Disease",130,200,3,123-456-7890,patient@example.com,4
+" Mary Clark ",70,Male,"Heart Disease",130,200,3,098-765-4321,,4
+" James Taylor ",35,Male,Hypertension,130,200,3,555-555-5555,contact@domain.com,4
+" James Taylor ",70,Male,Hypertension,130,200,3,,contact@domain.com,4
+" Michael Wilson ",60,Male,Hypertension,130,200,3,,name@hospital.org,4
+" John Doe ",35,Male,Hypertension,130,200,3,123-456-7890,name@hospital.org,4
+" Emily Davis ",35,Other,"Heart Disease",130,200,3,555-555-5555,,4
+" Mary Clark ",35,Female,"Heart Disease",130,200,3,555-555-5555,contact@domain.com,4
+" Michael Wilson ",35,Male,Diabetes,130,200,3,098-765-4321,,4
+" Sarah Johnson ",35,Female,Hypertension,130,200,3,555-555-5555,patient@example.com,4
+" Mary Clark ",70,Male,Diabetes,130,200,3,098-765-4321,contact@domain.com,4
+" Robert Brown ",25,Female,"Heart Disease",130,200,3,098-765-4321,contact@domain.com,4
+" Jane Smith ",35,Male,"Heart Disease",130,200,3,,,4
+" Sarah Johnson ",35,Female,"Heart Disease",130,200,3,123-456-7890,patient@example.com,4
+" Mary Clark ",35,Male,"Heart Disease",130,200,3,123-456-7890,patient@example.com,4
+" James Taylor ",60,Female,Diabetes,130,200,3,,,4
+" John Doe ",25,Male,Diabetes,130,200,3,123-456-7890,,4
+" Michael Wilson ",60,Other,Diabetes,130,200,3,098-765-4321,,4
+" Emily Davis ",35,Other,Hypertension,130,200,3,,contact@domain.com,4
+" Sarah Johnson ",35,Male,Hypertension,130,200,3,,name@hospital.org,4
+" James Taylor ",25,Other,"Heart Disease",130,200,3,098-765-4321,,4
+" Robert Brown ",60,Female,Diabetes,130,200,3,,,4
+" Michael Wilson ",35,Male,Hypertension,130,200,3,098-765-4321,patient@example.com,4
+" Sarah Johnson ",25,Other,Hypertension,130,200,3,,patient@example.com,4
+" Jane Smith ",35,Female,Asthma,130,200,3,,patient@example.com,4
+" Sarah Johnson ",25,Female,Hypertension,130,200,3,555-555-5555,,4
+" Michael Wilson ",35,Female,Unknown,140,220,2,555-555-5555,patient@example.com,5
+" James Taylor ",25,Female,Unknown,140,220,2,123-456-7890,name@hospital.org,5
+" James Taylor ",25,Male,Unknown,140,220,2,098-765-4321,,5
+" Sarah Johnson ",60,Female,Unknown,140,220,2,098-765-4321,patient@example.com,5
+" Sarah Johnson ",25,Male,Unknown,140,220,2,555-555-5555,name@hospital.org,5
+" Emily Davis ",35,Male,Unknown,140,220,2,,contact@domain.com,5
+" Laura Martinez ",35,Male,Unknown,140,220,2,,contact@domain.com,5
+" John Doe ",35,Other,Unknown,140,220,2,123-456-7890,contact@domain.com,5
+" James Taylor ",25,Female,Unknown,140,200,2,098-765-4321,,6
+" Michael Wilson ",70,Male,Unknown,140,200,2,,,6
+" Mary Clark ",35,Other,Unknown,140,200,2,098-765-4321,contact@domain.com,6
+" Emily Davis ",35,Female,Unknown,140,200,2,,patient@example.com,6
+" David Lee ",35,Female,Unknown,140,200,2,123-456-7890,contact@domain.com,6
+" James Taylor ",35,Male,Unknown,140,200,2,123-456-7890,contact@domain.com,6
+" Mary Clark ",60,Male,Unknown,140,200,2,,contact@domain.com,6
+" Laura Martinez ",35,Other,Unknown,140,200,2,098-765-4321,contact@domain.com,6
+" Jane Smith ",60,Female,Unknown,140,200,2,555-555-5555,,6
+" Robert Brown ",35,Male,Unknown,140,200,2,123-456-7890,,6
+" Jane Smith ",60,Female,Unknown,140,200,2,098-765-4321,contact@domain.com,6
+" Emily Davis ",35,Other,Unknown,140,200,2,555-555-5555,patient@example.com,6
+" Sarah Johnson ",35,Other,Unknown,140,200,2,123-456-7890,patient@example.com,6
+" Mary Clark ",25,Female,Unknown,140,200,2,123-456-7890,name@hospital.org,6
+" Robert Brown ",60,Other,Unknown,140,200,2,555-555-5555,,6
+" Mary Clark ",35,Male,Hypertension,140,180,2,,,7
+" Laura Martinez ",60,Other,"Heart Disease",140,180,2,,name@hospital.org,7
+" Laura Martinez ",35,Male,Diabetes,140,180,2,123-456-7890,,7
+" Michael Wilson ",60,Other,"Heart Disease",140,180,2,123-456-7890,,7
+" David Lee ",35,Female,Hypertension,140,180,2,,contact@domain.com,7
+" Sarah Johnson ",25,Male,"Heart Disease",140,180,2,123-456-7890,,7
+" Sarah Johnson ",35,Male,Diabetes,140,180,2,,,7
+" Robert Brown ",70,Female,Asthma,140,180,2,,,7
+" James Taylor ",70,Other,Diabetes,140,180,2,,,7
+" Robert Brown ",35,Male,Diabetes,140,180,2,,,7
+" Jane Smith ",35,Female,Diabetes,140,180,2,555-555-5555,name@hospital.org,7
+" John Doe ",60,Female,Asthma,140,180,2,098-765-4321,name@hospital.org,7
+" John Doe ",35,Male,"Heart Disease",140,180,2,555-555-5555,contact@domain.com,7
+" Michael Wilson ",35,Other,Hypertension,140,180,2,098-765-4321,,7
+" Robert Brown ",35,Other,Diabetes,140,180,2,,patient@example.com,7
+" Mary Clark ",60,Other,Diabetes,140,180,2,555-555-5555,,7
+" David Lee ",60,Other,Diabetes,140,180,2,,contact@domain.com,7
+" John Doe ",35,Other,Hypertension,140,180,2,,contact@domain.com,7
+" Laura Martinez ",25,Other,Diabetes,140,180,2,,patient@example.com,7
+" Emily Davis ",35,Female,"Heart Disease",140,180,2,555-555-5555,,7
+" Robert Brown ",35,Other,"Heart Disease",140,180,2,555-555-5555,patient@example.com,7
+" John Doe ",70,Other,Diabetes,140,180,2,123-456-7890,,7
+" Emily Davis ",70,Female,Diabetes,140,180,2,123-456-7890,,7
+" Emily Davis ",35,Male,"Heart Disease",140,180,2,555-555-5555,,7
+" Sarah Johnson ",35,Male,Hypertension,140,180,2,,patient@example.com,7
+" Michael Wilson ",35,Other,Asthma,140,180,2,555-555-5555,contact@domain.com,7
+" Robert Brown ",25,Other,Hypertension,140,180,2,,,7
+" John Doe ",35,Female,Hypertension,140,180,2,,contact@domain.com,7
+" Jane Smith ",35,Male,"Heart Disease",140,180,2,,,7
+" Jane Smith ",70,Female,"Heart Disease",140,180,2,555-555-5555,,7
+" David Lee ",35,Male,Diabetes,140,180,2,098-765-4321,patient@example.com,7
+" Michael Wilson ",35,Female,"Heart Disease",140,180,2,123-456-7890,name@hospital.org,7
+" James Taylor ",70,Other,Diabetes,140,180,2,098-765-4321,,7
+" Emily Davis ",35,Male,Diabetes,140,180,2,098-765-4321,,7
+" Laura Martinez ",70,Female,Diabetes,140,180,2,098-765-4321,,7
+" Jane Smith ",35,Male,Asthma,140,180,2,123-456-7890,,7
+" Laura Martinez ",35,Female,"Heart Disease",140,180,2,123-456-7890,contact@domain.com,7
+" Mary Clark ",25,Female,Asthma,140,180,2,123-456-7890,patient@example.com,7
+" Robert Brown ",35,Female,Diabetes,140,180,2,123-456-7890,name@hospital.org,7
+" Mary Clark ",25,Other,Hypertension,140,180,2,555-555-5555,,7
+" Laura Martinez ",25,Male,"Heart Disease",140,180,2,555-555-5555,contact@domain.com,7
+" Robert Brown ",70,Male,"Heart Disease",140,180,2,098-765-4321,,7
+" Michael Wilson ",35,Male,Hypertension,140,180,2,,patient@example.com,7
+" Mary Clark ",35,Other,Diabetes,140,180,2,555-555-5555,,7
+" John Doe ",35,Other,Asthma,140,180,2,,,7
+" Sarah Johnson ",35,Female,Diabetes,140,180,2,,name@hospital.org,7
+" Sarah Johnson ",25,Female,Hypertension,140,180,2,123-456-7890,,7
+" Robert Brown ",60,Male,Diabetes,140,180,2,,patient@example.com,7
+" Sarah Johnson ",70,Male,Asthma,140,180,2,555-555-5555,contact@domain.com,7
+" Sarah Johnson ",35,Other,Hypertension,140,180,2,123-456-7890,,7
+" James Taylor ",35,Female,Asthma,140,180,2,,,7
+" Robert Brown ",35,Male,Diabetes,140,180,2,,,7
+" Mary Clark ",35,Female,Hypertension,140,180,2,,,7
+" James Taylor ",70,Female,Diabetes,140,180,2,,,7
+" Mary Clark ",35,Other,"Heart Disease",140,180,2,098-765-4321,contact@domain.com,7
+" John Doe ",35,Female,Asthma,140,180,2,,,7
+" Robert Brown ",35,Male,Asthma,140,180,2,,,7
+" Mary Clark ",25,Male,Hypertension,140,180,2,555-555-5555,contact@domain.com,7
+" Mary Clark ",35,Male,Diabetes,140,180,2,,,7
+" James Taylor ",35,Other,Diabetes,140,180,2,,contact@domain.com,7
+" Robert Brown ",35,Female,Asthma,140,180,2,123-456-7890,,7
+" John Doe ",70,Male,Diabetes,140,180,2,123-456-7890,contact@domain.com,7
+" Mary Clark ",35,Male,"Heart Disease",140,180,2,098-765-4321,contact@domain.com,7
+" Emily Davis ",35,Female,Diabetes,140,180,2,,patient@example.com,7
+" Michael Wilson ",35,Female,Diabetes,140,180,2,123-456-7890,,7
+" Robert Brown ",25,Female,Hypertension,140,180,2,,,7
+" Laura Martinez ",60,Other,Asthma,140,180,2,123-456-7890,patient@example.com,7
+" Laura Martinez ",60,Male,Hypertension,140,180,2,098-765-4321,contact@domain.com,7
+" Robert Brown ",60,Male,Diabetes,140,180,2,123-456-7890,,7
+" Sarah Johnson ",35,Female,"Heart Disease",140,180,2,555-555-5555,name@hospital.org,7
+" Robert Brown ",35,Other,"Heart Disease",140,180,2,098-765-4321,name@hospital.org,7
+" Jane Smith ",35,Female,Hypertension,140,160,2,555-555-5555,name@hospital.org,8
+" Sarah Johnson ",35,Other,Diabetes,140,160,2,555-555-5555,,8
+" Sarah Johnson ",35,Female,Asthma,140,160,2,098-765-4321,name@hospital.org,8
+" Emily Davis ",35,Male,Asthma,140,160,2,,name@hospital.org,8
+" Laura Martinez ",35,Other,Diabetes,140,160,2,555-555-5555,,8
+" Sarah Johnson ",25,Other,Diabetes,140,160,2,555-555-5555,,8
+" Mary Clark ",25,Female,Hypertension,140,160,2,123-456-7890,name@hospital.org,8
+" David Lee ",35,Male,Diabetes,140,160,2,,name@hospital.org,8
+" Robert Brown ",60,Male,"Heart Disease",140,160,2,123-456-7890,contact@domain.com,8
+" Mary Clark ",25,Male,"Heart Disease",140,160,2,,name@hospital.org,8
+" Emily Davis ",35,Male,"Heart Disease",140,160,2,,,8
+" Jane Smith ",35,Female,Asthma,140,160,2,123-456-7890,,8
+" James Taylor ",70,Other,Hypertension,140,160,2,098-765-4321,patient@example.com,8
+" Mary Clark ",25,Female,"Heart Disease",140,160,2,123-456-7890,,8
+" Emily Davis ",25,Other,Hypertension,140,160,2,,,8
+" Robert Brown ",35,Other,Hypertension,140,160,2,555-555-5555,name@hospital.org,8
+" Laura Martinez ",60,Female,"Heart Disease",140,160,2,123-456-7890,patient@example.com,8
+" Mary Clark ",35,Male,Diabetes,140,160,2,123-456-7890,name@hospital.org,8
+" John Doe ",70,Other,Hypertension,140,160,2,555-555-5555,,8
+" James Taylor ",35,Other,"Heart Disease",140,160,2,,name@hospital.org,8
+" Michael Wilson ",35,Other,Hypertension,140,160,2,098-765-4321,,8
+" Mary Clark ",35,Female,Diabetes,140,160,2,555-555-5555,contact@domain.com,8
+" John Doe ",35,Male,Asthma,140,160,2,123-456-7890,name@hospital.org,8
+" Mary Clark ",35,Other,"Heart Disease",140,160,2,,contact@domain.com,8
+" Emily Davis ",35,Other,Hypertension,140,160,2,,name@hospital.org,8
+" Mary Clark ",35,Male,Asthma,140,160,2,098-765-4321,,8
+" David Lee ",35,Female,Hypertension,140,160,2,,,8
+" Emily Davis ",60,Female,Hypertension,140,160,2,098-765-4321,contact@domain.com,8
+" Laura Martinez ",60,Other,Hypertension,140,160,2,,,8
+" Laura Martinez ",70,Other,Asthma,140,160,2,098-765-4321,,8
+" Emily Davis ",35,Other,Asthma,140,160,2,555-555-5555,patient@example.com,8
+" Michael Wilson ",60,Female,Asthma,140,160,2,,,8
+" David Lee ",70,Female,"Heart Disease",140,160,2,,,8
+" Jane Smith ",70,Other,Diabetes,140,160,2,,contact@domain.com,8
+" David Lee ",70,Female,Unknown,130,220,2,555-555-5555,patient@example.com,9
+" Robert Brown ",35,Female,Unknown,130,220,2,555-555-5555,patient@example.com,9
+" Laura Martinez ",35,Other,Unknown,130,220,2,,,9
+" Sarah Johnson ",35,Female,Unknown,130,220,2,098-765-4321,patient@example.com,9
+" Robert Brown ",70,Other,Unknown,130,220,2,,contact@domain.com,9
+" James Taylor ",35,Other,Unknown,130,220,2,098-765-4321,,9
+" Laura Martinez ",35,Male,Unknown,130,200,2,,name@hospital.org,10
+" Mary Clark ",35,Female,Unknown,130,200,2,,name@hospital.org,10
+" John Doe ",35,Female,Unknown,130,200,2,,,10
+" Jane Smith ",60,Female,Unknown,130,200,2,,,10
+" Sarah Johnson ",60,Female,Unknown,130,200,2,123-456-7890,name@hospital.org,10
+" Emily Davis ",35,Other,"Heart Disease",120,220,2,555-555-5555,,11
+" Jane Smith ",60,Female,Diabetes,120,220,2,098-765-4321,patient@example.com,11
+" James Taylor ",60,Male,"Heart Disease",120,220,2,555-555-5555,contact@domain.com,11
+" Robert Brown ",35,Female,Asthma,120,220,2,123-456-7890,,11
+" John Doe ",60,Male,Asthma,120,220,2,098-765-4321,contact@domain.com,11
+" John Doe ",35,Other,Asthma,120,220,2,123-456-7890,contact@domain.com,11
+" Laura Martinez ",60,Female,Diabetes,120,220,2,,contact@domain.com,11
+" David Lee ",60,Female,Asthma,120,220,2,555-555-5555,patient@example.com,11
+" Laura Martinez ",35,Female,Asthma,120,220,2,,name@hospital.org,11
+" Sarah Johnson ",35,Female,"Heart Disease",120,220,2,555-555-5555,contact@domain.com,11
+" Laura Martinez ",35,Female,Asthma,120,220,2,098-765-4321,name@hospital.org,11
+" Mary Clark ",60,Female,Asthma,120,220,2,123-456-7890,patient@example.com,11
+" Robert Brown ",35,Male,Hypertension,120,220,2,123-456-7890,,11
+" Michael Wilson ",60,Other,Asthma,120,220,2,555-555-5555,,11
+" Mary Clark ",35,Other,Hypertension,120,220,2,123-456-7890,name@hospital.org,11
+" David Lee ",25,Female,Asthma,120,220,2,,,11
+" David Lee ",35,Female,Diabetes,120,220,2,123-456-7890,,11
+" John Doe ",60,Male,"Heart Disease",120,220,2,,contact@domain.com,11
+" Robert Brown ",35,Other,Hypertension,120,220,2,555-555-5555,name@hospital.org,11
+" Jane Smith ",35,Female,Asthma,120,220,2,555-555-5555,,11
+" Michael Wilson ",70,Female,Asthma,120,220,2,098-765-4321,contact@domain.com,11
+" Mary Clark ",35,Female,Diabetes,120,220,2,098-765-4321,patient@example.com,11
+" Sarah Johnson ",35,Female,Diabetes,120,220,2,123-456-7890,name@hospital.org,11
+" Michael Wilson ",35,Male,"Heart Disease",120,220,2,,contact@domain.com,11
+" Michael Wilson ",25,Male,Asthma,120,220,2,555-555-5555,patient@example.com,11
+" Emily Davis ",35,Male,Hypertension,120,220,2,123-456-7890,contact@domain.com,11
+" Jane Smith ",35,Other,Diabetes,120,220,2,,,11
+" James Taylor ",35,Male,Diabetes,120,220,2,123-456-7890,,11
+" Emily Davis ",35,Male,Diabetes,120,200,2,,,12
+" Emily Davis ",25,Male,Asthma,120,200,2,,,12
+" Jane Smith ",60,Female,Asthma,120,200,2,,,12
+" John Doe ",35,Male,Hypertension,120,200,2,,contact@domain.com,12
+" Robert Brown ",35,Other,"Heart Disease",120,200,2,098-765-4321,name@hospital.org,12
+" David Lee ",70,Other,"Heart Disease",120,200,2,123-456-7890,,12
+" Michael Wilson ",35,Female,Diabetes,120,200,2,098-765-4321,,12
+" Jane Smith ",35,Male,"Heart Disease",120,200,2,098-765-4321,patient@example.com,12
+" Michael Wilson ",25,Male,Diabetes,120,200,2,,,12
+" Mary Clark ",70,Female,"Heart Disease",120,200,2,,name@hospital.org,12
+" Mary Clark ",70,Other,Asthma,120,200,2,555-555-5555,contact@domain.com,12
+" Sarah Johnson ",60,Male,"Heart Disease",120,200,2,,,12
+" Mary Clark ",70,Male,"Heart Disease",120,200,2,,name@hospital.org,12
+" Emily Davis ",25,Female,Asthma,120,200,2,,name@hospital.org,12
+" John Doe ",70,Male,Hypertension,120,200,2,098-765-4321,contact@domain.com,12
+" Jane Smith ",25,Male,Asthma,120,200,2,,name@hospital.org,12
+" Robert Brown ",70,Other,"Heart Disease",120,200,2,,patient@example.com,12
+" Jane Smith ",35,Other,Hypertension,120,200,2,,,12
+" Sarah Johnson ",35,Male,Asthma,120,200,2,098-765-4321,,12
+" Sarah Johnson ",35,Female,Hypertension,120,200,2,,name@hospital.org,12
+" Mary Clark ",35,Female,"Heart Disease",120,200,2,,name@hospital.org,12
+" Michael Wilson ",35,Female,Diabetes,120,200,2,555-555-5555,patient@example.com,12
+" Mary Clark ",35,Other,Diabetes,120,200,2,555-555-5555,,12
+" Sarah Johnson ",35,Female,Asthma,120,200,2,555-555-5555,patient@example.com,12
+" Robert Brown ",35,Male,"Heart Disease",120,200,2,,contact@domain.com,12
+" Emily Davis ",60,Other,Diabetes,120,200,2,123-456-7890,contact@domain.com,12
+" Jane Smith ",70,Female,Hypertension,120,200,2,123-456-7890,,12
+" Michael Wilson ",25,Female,"Heart Disease",120,200,2,,,12
+" Michael Wilson ",70,Female,Diabetes,120,200,2,,name@hospital.org,12
+" Michael Wilson ",60,Male,Hypertension,120,200,2,098-765-4321,patient@example.com,12
+" Robert Brown ",35,Other,Asthma,110,220,2,098-765-4321,contact@domain.com,13
+" David Lee ",70,Male,Asthma,110,220,2,,name@hospital.org,13
+" Jane Smith ",35,Female,Diabetes,110,220,2,123-456-7890,contact@domain.com,13
+" David Lee ",70,Other,"Heart Disease",110,220,2,,name@hospital.org,13
+" Robert Brown ",35,Other,"Heart Disease",110,220,2,,contact@domain.com,13
+" Sarah Johnson ",60,Female,Diabetes,110,220,2,,contact@domain.com,13
+" Emily Davis ",35,Male,Hypertension,110,220,2,123-456-7890,,13
+" Jane Smith ",70,Male,Diabetes,110,220,2,555-555-5555,name@hospital.org,13
+" David Lee ",35,Female,Asthma,110,220,2,,contact@domain.com,13
+" James Taylor ",35,Other,Diabetes,110,220,2,098-765-4321,contact@domain.com,13
+" James Taylor ",35,Female,Asthma,110,220,2,555-555-5555,name@hospital.org,13
+" Jane Smith ",25,Male,Asthma,110,220,2,,name@hospital.org,13
+" Emily Davis ",60,Female,Hypertension,110,220,2,098-765-4321,name@hospital.org,13
+" Sarah Johnson ",35,Female,Diabetes,110,220,2,555-555-5555,contact@domain.com,13
+" David Lee ",25,Other,"Heart Disease",110,220,2,,name@hospital.org,13
+" Laura Martinez ",60,Other,"Heart Disease",110,220,2,098-765-4321,,13
+" Emily Davis ",60,Female,"Heart Disease",110,220,2,098-765-4321,patient@example.com,13
+" Jane Smith ",35,Other,"Heart Disease",110,220,2,123-456-7890,name@hospital.org,13
+" Sarah Johnson ",35,Male,Hypertension,110,220,2,555-555-5555,contact@domain.com,13
+" James Taylor ",60,Male,"Heart Disease",110,220,2,,,13
+" John Doe ",70,Female,Asthma,110,220,2,098-765-4321,,13
+" Sarah Johnson ",35,Female,Asthma,110,220,2,555-555-5555,,13
+" Michael Wilson ",60,Female,Asthma,110,220,2,,,13
+" Michael Wilson ",35,Male,Asthma,110,220,2,555-555-5555,,13
+" Robert Brown ",60,Male,"Heart Disease",110,220,2,,contact@domain.com,13
+" Sarah Johnson ",60,Female,Hypertension,110,220,2,,contact@domain.com,13
+" Laura Martinez ",35,Other,"Heart Disease",110,220,2,123-456-7890,patient@example.com,13
+" John Doe ",70,Male,Hypertension,110,220,2,555-555-5555,,13
+" James Taylor ",60,Female,Diabetes,110,220,2,098-765-4321,,13
+" Jane Smith ",35,Other,Diabetes,110,220,2,,,13
+" Jane Smith ",35,Female,Hypertension,110,220,2,555-555-5555,contact@domain.com,13
+" Sarah Johnson ",35,Other,Diabetes,110,220,2,555-555-5555,contact@domain.com,13
+" Laura Martinez ",35,Female,Diabetes,110,220,2,,name@hospital.org,13
+" James Taylor ",25,Female,Asthma,110,200,2,,contact@domain.com,14
+" Jane Smith ",35,Female,Asthma,110,200,2,555-555-5555,,14
+" Emily Davis ",70,Male,Diabetes,110,200,2,,,14
+" Robert Brown ",60,Female,Diabetes,110,200,2,098-765-4321,contact@domain.com,14
+" Sarah Johnson ",70,Male,Diabetes,110,200,2,123-456-7890,patient@example.com,14
+" Laura Martinez ",70,Other,Diabetes,110,200,2,123-456-7890,,14
+" Emily Davis ",70,Other,"Heart Disease",110,200,2,123-456-7890,contact@domain.com,14
+" Sarah Johnson ",35,Male,Diabetes,110,200,2,555-555-5555,,14
+" James Taylor ",35,Male,Hypertension,110,200,2,098-765-4321,,14
+" Sarah Johnson ",25,Male,Hypertension,110,200,2,,patient@example.com,14
+" Emily Davis ",35,Female,Diabetes,110,200,2,123-456-7890,patient@example.com,14
+" Jane Smith ",25,Male,Asthma,110,200,2,,contact@domain.com,14
+" Robert Brown ",25,Male,Asthma,110,200,2,555-555-5555,,14
+" James Taylor ",70,Female,Hypertension,110,200,2,098-765-4321,patient@example.com,14
+" Robert Brown ",35,Male,"Heart Disease",110,200,2,555-555-5555,patient@example.com,14
+" Jane Smith ",60,Male,"Heart Disease",110,200,2,,contact@domain.com,14
+" Michael Wilson ",35,Male,Hypertension,110,200,2,,name@hospital.org,14
+" Michael Wilson ",35,Male,Asthma,110,200,2,555-555-5555,name@hospital.org,14
+" Mary Clark ",35,Other,Diabetes,110,200,2,098-765-4321,,14
+" Robert Brown ",25,Male,Hypertension,110,200,2,,name@hospital.org,14
+" Jane Smith ",60,Other,"Heart Disease",110,200,2,098-765-4321,,14
+" Sarah Johnson ",35,Male,"Heart Disease",110,200,2,555-555-5555,patient@example.com,14
+" Mary Clark ",25,Female,Unknown,140,180,1,123-456-7890,name@hospital.org,15
+" Michael Wilson ",35,Female,Unknown,140,180,1,098-765-4321,name@hospital.org,15
+" Mary Clark ",35,Male,Unknown,140,180,1,,name@hospital.org,15
+" Robert Brown ",35,Female,Unknown,140,180,1,,,15
+" Jane Smith ",25,Male,Unknown,140,180,1,123-456-7890,,15
+" John Doe ",35,Female,Unknown,140,180,1,,,15
+" Jane Smith ",70,Other,Unknown,140,180,1,555-555-5555,,15
+" Michael Wilson ",35,Male,Unknown,140,180,1,555-555-5555,contact@domain.com,15
+" Laura Martinez ",35,Other,Unknown,140,180,1,123-456-7890,,15
+" Robert Brown ",35,Other,Unknown,140,180,1,123-456-7890,contact@domain.com,15
+" Michael Wilson ",70,Male,Unknown,140,180,1,098-765-4321,,15
+" David Lee ",70,Female,Unknown,140,180,1,123-456-7890,contact@domain.com,15
+" Robert Brown ",70,Male,Unknown,140,180,1,098-765-4321,contact@domain.com,15
+" Emily Davis ",35,Other,Unknown,140,180,1,098-765-4321,patient@example.com,15
+" Robert Brown ",60,Other,Unknown,140,180,1,123-456-7890,,15
+" Michael Wilson ",25,Other,Unknown,140,180,1,098-765-4321,patient@example.com,15
+" John Doe ",35,Male,Unknown,140,180,1,098-765-4321,patient@example.com,15
+" John Doe ",35,Male,Unknown,140,180,1,555-555-5555,contact@domain.com,15
+" David Lee ",35,Other,Unknown,140,180,1,098-765-4321,,15
+" John Doe ",35,Other,Unknown,140,160,1,,patient@example.com,16
+" John Doe ",35,Female,Unknown,140,160,1,,name@hospital.org,16
+" Robert Brown ",70,Male,Unknown,140,160,1,,,16
+" James Taylor ",25,Female,Unknown,140,160,1,555-555-5555,,16
+" Sarah Johnson ",70,Other,Unknown,140,160,1,123-456-7890,contact@domain.com,16
+" James Taylor ",35,Male,Unknown,140,160,1,,,16
+" John Doe ",70,Other,Unknown,120,220,1,555-555-5555,,17
+" John Doe ",35,Other,Unknown,120,220,1,555-555-5555,,17
+" John Doe ",60,Female,Unknown,120,220,1,555-555-5555,contact@domain.com,17
+" Sarah Johnson ",35,Other,Unknown,120,220,1,,patient@example.com,17
+" Laura Martinez ",60,Female,Unknown,120,220,1,,contact@domain.com,17
+" Laura Martinez ",35,Other,Unknown,120,220,1,,patient@example.com,17
+" Emily Davis ",60,Other,Unknown,120,220,1,098-765-4321,patient@example.com,17
+" Michael Wilson ",70,Male,Unknown,120,220,1,,patient@example.com,17
+" James Taylor ",70,Female,Unknown,120,200,1,,,18
+" Robert Brown ",25,Female,Unknown,120,200,1,,contact@domain.com,18
+" Mary Clark ",70,Male,Unknown,120,200,1,098-765-4321,,18
+" Jane Smith ",35,Male,Unknown,120,200,1,,,18
+" Michael Wilson ",60,Female,Unknown,120,200,1,555-555-5555,patient@example.com,18
+" Michael Wilson ",25,Male,Unknown,110,220,1,,name@hospital.org,19
+" Jane Smith ",35,Male,Unknown,110,220,1,098-765-4321,name@hospital.org,19
+" Mary Clark ",60,Other,Unknown,110,220,1,,,19
+" Robert Brown ",60,Female,Unknown,110,220,1,,contact@domain.com,19
+" Jane Smith ",70,Female,Unknown,110,220,1,098-765-4321,name@hospital.org,19
+" Robert Brown ",25,Male,Unknown,110,200,1,123-456-7890,contact@domain.com,20
+" Jane Smith ",70,Male,Unknown,110,200,1,098-765-4321,,20
+" Laura Martinez ",60,Other,Unknown,110,200,1,555-555-5555,contact@domain.com,20
+" Michael Wilson ",35,Female,Unknown,110,200,1,098-765-4321,contact@domain.com,20
+" David Lee ",35,Female,Unknown,110,200,1,555-555-5555,,20
+" Emily Davis ",35,Other,Unknown,110,200,1,123-456-7890,name@hospital.org,20
+" Jane Smith ",25,Male,Unknown,110,200,1,,,20

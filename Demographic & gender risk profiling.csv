@@ -1,0 +1,10 @@
+Gender,Age_Group,Total_Patients,High_Risk_Patients,High_Risk_Rate_Pct,Avg_Systolic_BP,Avg_Cholesterol
+Other,Middle-aged,121,68,56.20,126.3,188.3
+Female,Middle-aged,153,84,54.90,125.6,188.4
+Male,Middle-aged,148,80,54.05,125.9,185.9
+Female,Senior,94,54,57.45,124.3,190
+Male,Senior,87,49,56.32,125.1,188.5
+Other,Senior,89,42,47.19,124,184.3
+Male,Young,52,28,53.85,123.3,189.6
+Female,Young,47,25,53.19,126.8,187.2
+Other,Young,43,16,37.21,127,182.8
