@@ -13,9 +13,8 @@ Electronic health record (EHR) systems often collect clinical and patient data a
 This project walks through a practical workflow to turn 1,000 raw patient records into clean, reliable data ready for analysis:
 1. **Data Cleaning and Preprocessing (Python / Pandas)**: Cleaned string fields, standardized dates into ISO format, parsed composite blood pressure strings into separate systolic and diastolic fields, and handled missing values using appropriate imputation strategies.
 2. **Clinical Feature Engineering**: Created demographic age buckets, categorized high-risk cardiovascular patients, and built a composite 0–3 clinical risk score.
-3. **Exploratory Data Analysis (EDA)**: Analyzed disease prevalence, patient age demographics, and vital sign relationships using visual distributions and correlation heatmaps.
+3. **Exploratory Data Analysis (EDA)**: Analyzed disease prevalence, patient age demographics, and vital sign relationships using visual distributions, correlation heatmaps, and statistical summaries.
 4. **Relational Database Analytics (SQL)**: Structured a series of SQL queries to generate patient priority triage lists, summarize condition statistics, evaluate medication adherence, and create demographic cross-tabulations.
-5. **Business Intelligence (Tableau)**: Outlined an interactive dashboard framework to track key metrics and support clinical resource planning.
 
 ---
 
@@ -56,12 +55,12 @@ flowchart TD
     D -->|Age groups, risk categories, composite risk scores| E[Enriched Dataset]
     E --> F[Phase 3: Exploratory Data Analysis]
     E --> G[Phase 4: SQL Database Queries]
-    E --> H[Phase 5: Tableau Dashboard]
     G --> I[1. Priority Triage Ranking]
     G --> J[2. Demographic Risk Profiling]
     G --> K[3. Condition Summary]
     G --> L[4. Medication Audit]
     G --> M[5. Risk Category Pivot]
+    F & G --> N[Conclusion & Clinical Recommendations]
 ```
 
 ---
@@ -376,19 +375,26 @@ GROUP BY Risk_Category;
 
 ---
 
-## Phase 5: Tableau Dashboard
+## Conclusion & Key Insights
 
-An executive dashboard was designed in Tableau (`Healthcare Tablue.twb`) to give healthcare staff and leadership a visual summary of clinic performance:
+This end-to-end healthcare analytics pipeline transformed 1,000 messy, unstructured electronic health records into an operational clinical intelligence system combining Python preprocessing, biometric statistical analysis, and SQL triage reporting.
 
-<!-- Placeholder for Tableau Dashboard Screenshot -->
-![Tableau Clinical Dashboard Preview](assets/tableau_dashboard_preview.png)
-*Figure 6: Preview of the interactive Tableau clinical dashboard.*
+### Summary of Key Findings:
 
-### Main Dashboard Elements:
-* **KPI Metrics**: Total patient count, percentage of high-risk patients, average risk score, and patients requiring immediate triage.
-* **Demographic Breakdown**: Distribution of high-risk patients filtered by gender and age group.
-* **Vitals Scatter Plot**: Visual comparison of systolic blood pressure versus cholesterol levels against clinical threshold lines.
-* **Untreated Patient Tracker**: Table listing high-risk patients with no active medication for prompt follow-up.
+1. **Data Quality & Pipeline Integrity**:
+   * Preprocessing resolved pervasive EHR formatting inconsistencies—parsing composite blood pressure strings into separate systolic and diastolic fields, standardizing multi-format visit dates, and applying median imputation to ensure clean data for downstream analytics.
+
+2. **Systemic vs. Age-Isolated Risk Reality**:
+   * Contrary to the common clinical assumption that cardiovascular vulnerability is confined to elderly demographics, risk prevalence remains remarkably uniform at **~50%–53%** across young adults, middle-aged patients, and seniors across all genders.
+   * However, clinical workload heavily concentrates in the **middle-aged bracket (30–55 years)**, which accounts for nearly half of the entire patient cohort and represents the single largest volume driver for primary care teams.
+
+3. **Elevated Hemodynamic & Chronic Disease Burden**:
+   * More than 50% of patients with recorded vital signs exhibit elevated or hypertensive readings (median systolic BP: **130 mmHg**, median diastolic BP: **85 mmHg**), with the upper quartile reaching Stage 2 Hypertension criteria (140/90 mmHg).
+   * Confirmed chronic conditions (Asthma, Diabetes, Hypertension, and Heart Disease) consistently reflect elevated average risk scores (1.86–1.94) and higher mean cholesterol compared to unassigned records.
+
+4. **Actionable Clinical & Operational Interventions**:
+   * **Automated Priority Triage (`DENSE_RANK()`)**: Care coordinators can instantly identify and contact high-risk Tier 1 and Tier 2 patients presenting maximum risk scores (3) paired with stage 2 vitals (140 mmHg systolic BP and 220 mg/dL cholesterol).
+   * **Closing the Medication Adherence Gap**: Auditing prescriptions revealed that **20.86% of hypertensive patients** (and ~17%–19% of diabetic and heart disease patients) are currently unmedicated (`NONE`), providing an immediate, high-impact target for proactive clinical outreach and medication management.
 
 ---
 
