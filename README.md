@@ -2,7 +2,8 @@
 
 An end-to-end data analytics project focused on cleaning inconsistent electronic health records, engineering clinical risk features, exploring biometric distributions, and running SQL queries for patient triage and operational reporting.
 
-[Open Interactive Notebook in Google Colab](https://colab.research.google.com/drive/1Ai9yKhi_wmPtIy6m0Ur9T7IhHtjBKNO2?usp=sharing)
+[![Colab](https://img.shields.io/badge/Google_Colab-Open_Notebook-F9AB00?style=for-the-badge&logo=googlecolab&logoColor=white)](https://colab.research.google.com/drive/1Ai9yKhi_wmPtIy6m0Ur9T7IhHtjBKNO2?usp=sharing)
+[![Tableau](https://img.shields.io/badge/Tableau_Public-Interactive_Dashboard-E97627?style=for-the-badge&logo=tableau&logoColor=white)](https://public.tableau.com/views/HealthcareTablue/Dashboard2)
 
 ---
 
@@ -51,7 +52,14 @@ Healthcare-Practice/
 │   ├── 04_medication_audit_untreated_rate.sql   # Medication distribution and untreated patient rates
 │   └── 05_risk_category_age_pivot.sql          # Risk category counts pivoted by age group
 ├── assets/
-│   └── .gitkeep                          # Directory for charts, plots, and dashboard screenshots
+│   ├── 01_condition_distribution.png     # Condition distribution plot
+│   ├── 02_age_distribution.png           # Age demographics histogram
+│   ├── 03_bp_by_condition.png            # Blood pressure boxplots
+│   ├── 04_correlation_heatmap.png        # Correlation matrix heatmap
+│   ├── 05_demographic_gender_risk_profiling.png # Demographic risk bar chart
+│   └── tableau_dashboard_preview.png     # Interactive Tableau dashboard preview
+├── Healthcare Tablue.twb                  # Tableau Workbook file
+├── index.html                            # Interactive web dashboard viewer (GitHub Pages ready)
 ├── .gitignore                            # Standard git exclusions
 ├── requirements.txt                      # Project dependencies
 └── README.md                             # Project documentation
@@ -128,6 +136,22 @@ df.loc[df['Cholesterol'] >= 200, 'Risk_Score'] += 1
 severe_conditions = ['Heart Disease', 'Hypertension', 'Diabetes', 'Asthma', 'Cancer']
 df.loc[df['Condition'].isin(severe_conditions), 'Risk_Score'] += 1
 ```
+
+---
+
+## Interactive Tableau Dashboard
+
+An interactive dashboard was built in Tableau Public to provide clinicians and hospital administrators with dynamic visual filtering across patient demographics, clinical conditions, and medication treatments.
+
+[![Healthcare Patient Analytics Tableau Dashboard](assets/tableau_dashboard_preview.png)](https://public.tableau.com/views/HealthcareTablue/Dashboard2)
+
+> ### 📊 [👉 Click Here to Open & Explore the Live Interactive Tableau Dashboard](https://public.tableau.com/views/HealthcareTablue/Dashboard2)
+>
+> **Interactive Capabilities & Key Visualizations:**
+> * **1. Patient Age & Chronic Condition Scatter**: Hover and filter through individual patient records across age cohorts (25, 35, 60, 70) mapped against primary diagnoses (Asthma, Diabetes, Heart Disease, Hypertension).
+> * **2. Demographic & Gender Risk Profiling**: Interactive bar breakdown comparing the high-risk rate across male, female, and other gender identities within each age group.
+> * **3. Condition vs. Medication Matrix**: Heatmap tiles showing treatment distribution (Albuterol, Atorvastatin, Lisinopril, Metformin) and highlighting unmedicated patients for immediate follow-up.
+> * **Live In-Browser Embed**: You can also view the embedded interactive dashboard directly via [`index.html`](index.html).
 
 ---
 
@@ -416,3 +440,4 @@ In this project, I cleaned a messy healthcare dataset with 1,000 patient records
 
 * **Author**: [Abdullah Bin Madhi](https://github.com/abdullah-binmadhi)
 * **Interactive Notebook**: [Google Colab Link](https://colab.research.google.com/drive/1Ai9yKhi_wmPtIy6m0Ur9T7IhHtjBKNO2?usp=sharing)
+* **Interactive Dashboard**: [Tableau Public Link](https://public.tableau.com/views/HealthcareTablue/Dashboard2)

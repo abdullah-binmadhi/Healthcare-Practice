@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Patient Analytics - Interactive Tableau Dashboard</title>
+    <meta name="description" content="Interactive Tableau Dashboard for Healthcare Patient Analytics: Data Cleaning, EDA & SQL Pipeline by Abdullah Bin Madhi.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0f172a;
+            --bg-secondary: #1e293b;
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent-blue: #38bdf8;
+            --accent-tableau: #e97627;
+            --border-color: rgba(148, 163, 184, 0.15);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            line-height: 1.5;
+        }
+
+        header {
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-color);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .title-group {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .tableau-logo-badge {
+            background: linear-gradient(135deg, #e97627, #f97316);
+            color: white;
+            padding: 0.35rem 0.65rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            letter-spacing: -0.02em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 0.75rem;
+            align-items: center;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.5rem 0.9rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-outline:hover {
+            background: var(--bg-secondary);
+            border-color: var(--accent-blue);
+            color: var(--accent-blue);
+        }
+
+        .btn-primary {
+            background: #e97627;
+            color: white;
+            border: 1px solid #e97627;
+        }
+
+        .btn-primary:hover {
+            background: #d96516;
+        }
+
+        main {
+            flex: 1;
+            max-width: 1400px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 1.5rem 1rem;
+        }
+
+        .viz-wrapper {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1rem;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(8px);
+            overflow: hidden;
+        }
+
+        .viz-info-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 0.75rem;
+            margin-bottom: 0.75rem;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .viz-info-bar span {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+        }
+
+        .tableauPlaceholder {
+            border-radius: 8px;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        footer {
+            background: var(--bg-primary);
+            border-top: 1px solid var(--border-color);
+            padding: 1.5rem;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        footer a {
+            color: var(--accent-blue);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .nav-links {
+                width: 100%;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+            }
+            h1 {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="title-group">
+                <span class="tableau-logo-badge">Tableau</span>
+                <h1>Healthcare Patient Analytics Dashboard</h1>
+            </div>
+            <div class="nav-links">
+                <a href="https://github.com/abdullah-binmadhi/Healthcare-Practice" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    GitHub Repository
+                </a>
+                <a href="https://colab.research.google.com/drive/1Ai9yKhi_wmPtIy6m0Ur9T7IhHtjBKNO2?usp=sharing" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+                    Google Colab
+                </a>
+                <a href="https://public.tableau.com/views/HealthcareTablue/Dashboard2" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                    Open in Tableau Public ↗
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="viz-wrapper">
+            <div class="viz-info-bar">
+                <span>📊 Interactive Clinical & Demographic Exploration</span>
+                <span>👤 Author: Abdullah Bin Madhi</span>
+            </div>
+
+            <!-- Tableau Public Interactive Embed Code -->
+            <div class='tableauPlaceholder' id='viz1787045187352' style='position: relative'>
+                <noscript>
+                    <a href='https://public.tableau.com/views/HealthcareTablue/Dashboard2' target='_blank' rel='noopener noreferrer'>
+                        <img alt='Healthcare Patient Analytics Dashboard' src='assets/tableau_dashboard_preview.png' style='border: none; width: 100%; height: auto;' />
+                    </a>
+                </noscript>
+                <object class='tableauViz' style='display:none;'>
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                    <param name='embed_code_version' value='3' />
+                    <param name='site_root' value='' />
+                    <param name='name' value='HealthcareTablue&#47;Dashboard2' />
+                    <param name='tabs' value='no' />
+                    <param name='toolbar' value='yes' />
+                    <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;He&#47;HealthcareTablue&#47;Dashboard2&#47;1.png' />
+                    <param name='animate_transition' value='yes' />
+                    <param name='display_static_image' value='yes' />
+                    <param name='display_spinner' value='yes' />
+                    <param name='display_overlay' value='yes' />
+                    <param name='display_count' value='yes' />
+                    <param name='language' value='en-GB' />
+                    <param name='filter' value='publish=yes' />
+                </object>
+            </div>
+            <script type='text/javascript'>
+                var divElement = document.getElementById('viz1787045187352');
+                var vizElement = divElement.getElementsByTagName('object')[0];
+                if ( divElement.offsetWidth > 800 ) {
+                    vizElement.style.width='100%';
+                    vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+                } else if ( divElement.offsetWidth > 500 ) {
+                    vizElement.style.width='100%';
+                    vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+                } else {
+                    vizElement.style.width='100%';
+                    vizElement.style.height='927px';
+                }
+                var scriptElement = document.createElement('script');
+                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                vizElement.parentNode.insertBefore(scriptElement, vizElement);
+            </script>
+        </div>
+    </main>
+
+    <footer>
+        <p>Healthcare Patient Analytics: Data Cleaning, EDA & SQL Pipeline • Developed by <a href="https://github.com/abdullah-binmadhi" target="_blank" rel="noopener noreferrer">Abdullah Bin Madhi</a></p>
+    </footer>
+</body>
+</html>
